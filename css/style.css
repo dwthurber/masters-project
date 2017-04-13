@@ -13,6 +13,9 @@
 	font-size: inherit;
 }
 
+a {
+  #4e2a84;
+}
 body {
   background-color: #efefef;
 }
@@ -24,4 +27,8 @@ body {
 
 .tab.active {
   border-bottom: #4e2a84 solid 2px;
+}
+
+.card .card-content p {
+  margin: 8px 0;
 }
