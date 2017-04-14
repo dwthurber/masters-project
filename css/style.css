@@ -52,6 +52,10 @@ blockquote {
   border-left-color: #4e2a84;
 }
 
+.nav-wrapper {
+  padding: 0 20px;
+}
+
 /* -------------------------------- 
 
 Main Components 
@@ -654,8 +658,7 @@ xcustom form elements
   background-color: #ffffff;
   left: 5px;
 }
-.cd-filter-block input[type=radio]:checked + label::before,
-.cd-filter-block input[type=checkbox]:checked + label::before {
+.cd-filter-block input[type=radio]:checked + label::before {
   border-color: #41307c;
   background-color: #41307c !important;
 }

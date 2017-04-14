@@ -13,26 +13,17 @@
 <body ng-controller="mainController">
   
   <nav class="purple" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo left"><img src="img/MSHE-horizontal-option1_whiteTransparent-01.png"></a>
+    <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo left"><img src="img/MSHE-horizontal-option1_whiteTransparent-01.png"></a>
       <ul class="right">
           <li title="Guides"><a href="index.html"><i class="material-icons">library_books</i></a></li>
           <li class="active"><a href="resources.html"><i class="material-icons">view_module</i></a></li>
           <li><a href="#"><i class="material-icons">speaker_notes</i></a></li>
       </ul>
-
-<!--
-      <ul id="nav-mobile" class="side-nav">
-        <li class="active" title="Guides"><a href="index.html"><i class="material-icons">library_books</i>Guides</a></li>
-        <li><a href="#"><i class="material-icons">view_module</i>MP Archive</a></li>
-        <li><a href="#"><i class="material-icons">speaker_notes</i> Resources</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
--->
     </div>
     
   </nav>
   <nav class="purple darken-1">
-    <div class="nav-wrapper container">
+    <div class="nav-wrapper">
       <form>
         <div class="input-field">
           <input id="search" type="search" required>
@@ -57,85 +48,27 @@
 						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
 					</li> 
 					<li class="filter"><a class="selected" href="#0" data-type="all">All</a></li>
-					<li class="filter" data-filter=".color-1"><a href="#0" data-type="color-1">Color 1</a></li>
-					<li class="filter" data-filter=".color-2"><a href="#0" data-type="color-2">Color 2</a></li>
+					<li class="filter" data-filter=".406"><a href="#0" data-type="color-1">MSHE 406</a></li>
+					<li class="filter" data-filter=".407"><a href="#0" data-type="color-2">MSHE 407</a></li>
+					<li class="filter" data-filter=".408"><a href="#0" data-type="color-2">MSHE 408</a></li>
 				</ul> <!-- cd-filters -->
 			</div> <!-- cd-tab-filter -->
 		</div> <!-- cd-tab-filter-wrapper -->
 
 		<section class="cd-gallery row">
-          <div class="col s12 m6 l4 mix color-1 check1 radio2">
-            <div class="card blue-grey darken-1">
-              <div class="card-content white-text">
-                <span class="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+          <div class="col s12 m6 l3 mix 406 research-question">
+            <div class="card small">
+              <div class="card-content grey-text">
+                <span class="card-title black-text"><i class="material-icons right">assignment</i>Forming Research Questions Worksheet</span>
+                <p>Use literature analysis to help form MPQ.</p>
               </div>
               <div class="card-action">
-                <a href="#">This is a link</a>
-                <a href="#">This is a link</a>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m6 l4 mix color-1 check1 radio2 ">
-            <div class="card blue-grey darken-1">
-              <div class="card-content white-text">
-                <span class="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-                <a href="#">This is a link</a>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m6 l4 mix color-2 check1 radio2 ">
-            <div class="card blue-grey darken-1">
-              <div class="card-content white-text">
-                <span class="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-                <a href="#">This is a link</a>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m6 l4 mix color-2 check1 radio3">
-            <div class="card blue-grey darken-1">
-              <div class="card-content white-text">
-                <span class="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-                <a href="#">This is a link</a>
+                <a href="https://northwestern.box.com/shared/static/luy5forqv8hdqopxki0z3w4fmqxp2s8u.docx" class="purple-text">Download <i class="material-icons right">file_download</i></a>
               </div>
             </div>
           </div>
           
-<!--
-			<ul>
-				<li class="mix color-1 check1 radio2 option3"><img src="img/img-1.jpg" alt="Image 1"></li>
-				<li class="mix color-2 check2 radio2 option2"><img src="img/img-2.jpg" alt="Image 2"></li>
-				<li class="mix color-1 check3 radio3 option1"><img src="img/img-3.jpg" alt="Image 3"></li>
-				<li class="mix color-1 check3 radio2 option4"><img src="img/img-4.jpg" alt="Image 4"></li>
-				<li class="mix color-1 check1 radio3 option2"><img src="img/img-5.jpg" alt="Image 5"></li>
-				<li class="mix color-2 check2 radio3 option3"><img src="img/img-6.jpg" alt="Image 6"></li>
-				<li class="mix color-2 check2 radio2 option1"><img src="img/img-7.jpg" alt="Image 7"></li>
-				<li class="mix color-1 check1 radio3 option4"><img src="img/img-8.jpg" alt="Image 8"></li>
-				<li class="mix color-2 check1 radio2 option3"><img src="img/img-9.jpg" alt="Image 9"></li>
-				<li class="mix color-1 check3 radio2 option4"><img src="img/img-10.jpg" alt="Image 10"></li>
-				<li class="mix color-1 check3 radio3 option2"><img src="img/img-11.jpg" alt="Image 11"></li>
-				<li class="mix color-2 check1 radio3 option1"><img src="img/img-12.jpg" alt="Image 12"></li>
-				<li class="gap"></li>
-				<li class="gap"></li>
-				<li class="gap"></li>
-			</ul>
--->
+
 			<div class="cd-fail-message">No results found</div>
 		</section> <!-- cd-gallery -->
 
@@ -150,43 +83,113 @@
 				</div> <!-- cd-filter-block -->
 
 				<div class="cd-filter-block">
-					<h4>Check boxes</h4>
+					<h4>Filters</h4>
 
 					<ul class="cd-filter-content cd-filters list">
 						<li>
-							<input class="filter" data-filter=".check1" type="checkbox" id="checkbox1">
-			    			<label class="checkbox-label" for="checkbox1">Option 1</label>
+							<input class="filter" data-filter=".artifact-analysis" type="checkbox" id="filled-in-box">
+							<label class="checkbox-label" for="filled-in-box">Artifact Analysis</label>
 						</li>
-
-						<li>
-							<input class="filter" data-filter=".check2" type="checkbox" id="checkbox2">
-							<label class="checkbox-label" for="checkbox2">Option 2</label>
+                      
+                        <li>
+							<input class="filter" data-filter=".charts-tables" type="checkbox" id="charts-tables">
+							<label class="checkbox-label" for="charts-tables">Charts and Tables</label>
 						</li>
-
-						<li>
-							<input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
-							<label class="checkbox-label" for="checkbox3">Option 3</label>
+                      
+                        <li>
+							<input class="filter" data-filter=".coding" type="checkbox" id="coding">
+							<label class="checkbox-label" for="coding">Coding</label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".focus-groups" type="checkbox" id="focus-groups">
+							<label class="checkbox-label" for="focus-groups">Focus Groups</label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".interviews" type="checkbox" id="interviews">
+							<label class="checkbox-label" for="interviews">Interviews</label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".irb" type="checkbox" id="irb">
+			    			<label class="checkbox-label" for="irb">IRB</label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".observations" type="checkbox" id="observations">
+							<label class="checkbox-label" for="observations">Observations</label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".rationale" type="checkbox" id="rationale">
+							<label class="checkbox-label" for="rationale">Rationale</label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".references" type="checkbox" id="references">
+							<label class="checkbox-label" for="references">References</label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".statistics" type="checkbox" id="statistics">
+							<label class="checkbox-label" for="statistics">Statistics</label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".surveys" type="checkbox" id="surveys">
+							<label class="checkbox-label" for="surveys">Surveys</label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".writing" type="checkbox" id="writing">
+							<label class="checkbox-label" for="writing">Writing & APA</label>
 						</li>
 					</ul> <!-- cd-filter-content -->
 				</div> <!-- cd-filter-block -->
 
 				<div class="cd-filter-block">
-					<h4>Radio buttons</h4>
+					<h4>MP Guide</h4>
 
 					<ul class="cd-filter-content cd-filters list">
 						<li>
-							<input class="filter" data-filter="" type="radio" name="radioButton" id="radio1" checked>
+							<input class="filter with-gap" data-filter="" type="radio" name="radioButton" id="radio1" checked>
 							<label class="radio-label" for="radio1">All</label>
 						</li>
 
 						<li>
-							<input class="filter" data-filter=".radio2" type="radio" name="radioButton" id="radio2">
-							<label class="radio-label" for="radio2">Choice 2</label>
+							<input class="filter" data-filter=".research-question" type="radio" name="radioButton" id="research-question">
+							<label class="radio-label" for="research-question">Research Question</label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".intro-background" type="radio" name="radioButton" id="intro-background">
+							<label class="radio-label" for="intro-background">Intro & Background</label>
 						</li>
 
 						<li>
-							<input class="filter" data-filter=".radio3" type="radio" name="radioButton" id="radio3">
-							<label class="radio-label" for="radio3">Choice 3</label>
+							<input class="filter" data-filter=".lit-review" type="radio" name="radioButton" id="lit-review">
+							<label class="radio-label" for="lit-review">Literature Review</label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".data-collection" type="radio" name="radioButton" id="data-collection">
+							<label class="radio-label" for="data-collection">Data Collection Methods</label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".data-results" type="radio" name="radioButton" id="data-results">
+							<label class="radio-label" for="data-results">Data Results Summary</label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".data-interpretation" type="radio" name="radioButton" id="data-interpretation">
+							<label class="radio-label" for="data-interpretation">Data interpretation </label>
+						</li>
+                      
+                        <li>
+							<input class="filter" data-filter=".conclusion" type="radio" name="radioButton" id="conclusion">
+							<label class="radio-label" for="conclusion">Conclusion</label>
 						</li>
 					</ul> <!-- cd-filter-content -->
 				</div> <!-- cd-filter-block -->
