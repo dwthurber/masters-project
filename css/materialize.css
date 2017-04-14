@@ -4161,7 +4161,7 @@ nav .brand-logo.center {
   }
   
   nav .brand-logo img {
-    height: 40px;
+    height: 50px;
   }
   nav .brand-logo.left, nav .brand-logo.right {
     padding: 0;
@@ -6336,12 +6336,12 @@ textarea.materialize-textarea {
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:before,
 [type="radio"].with-gap:checked + label:after {
-  border: 2px solid #26a69a;
+  border: 2px solid #4e2a84;
 }
 
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:after {
-  background-color: #26a69a;
+  background-color: #4e2a84;
 }
 
 [type="radio"]:checked + label:after {

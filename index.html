@@ -11,25 +11,38 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body ng-controller="mainController">
+  
   <nav class="purple" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="img/MSHE-horizontal-option1_whiteTransparent-01.png"></a>
-      <ul class="right hide-on-med-and-down">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo left"><img src="img/MSHE-horizontal-option1_whiteTransparent-01.png"></a>
+      <ul class="right">
           <li class="active" title="Guides"><a href="index.html"><i class="material-icons">library_books</i></a></li>
-          <li><a href="#"><i class="material-icons">view_module</i></a></li>
+          <li><a href="resources.html"><i class="material-icons">view_module</i></a></li>
           <li><a href="#"><i class="material-icons">speaker_notes</i></a></li>
-          <li><a href="sass.html"><i class="material-icons">search</i></a></li>
       </ul>
 
+<!--
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="sass.html"><i class="material-icons">search</i>Search</a></li>
         <li class="active" title="Guides"><a href="index.html"><i class="material-icons">library_books</i>Guides</a></li>
         <li><a href="#"><i class="material-icons">view_module</i>MP Archive</a></li>
         <li><a href="#"><i class="material-icons">speaker_notes</i> Resources</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+-->
+    </div>
+    
+  </nav>
+  <nav class="purple darken-1">
+    <div class="nav-wrapper container">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
     </div>
   </nav>
-  <div class="section no-pad-bot" id="index-banner">
+  <div class="section white" id="index-banner">
     <div class="container">
       <h3 class="header purple-text"><i class="material-icons small">library_books</i> Master's Project Guides</h3>    
     </div>
@@ -39,31 +52,27 @@
   <div class="container">
     <div class="section">
       <div class="row">
-        <div class="col s12 m4 l3">
-          <div class="card">
-            <div class="collection with-header purple-text">
-              <h5 class="collection-header">Final Paper</h5>
-              <a href="#research-question" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'research-question'}">Research Question</a>
-              <a href="#abstract" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'abstract'}">Abstract</a>
-              <a href="#!" class="collection-item grey-text">Introduction and Background</a>
-              <a href="#!" class="collection-item grey-text">Literature Review</a>
-              <a href="#!" class="collection-item grey-text">Data Collection Methods</a>
-              <a href="#!" class="collection-item grey-text">Data Results Summary</a>
-              <a href="#!" class="collection-item grey-text">Data Interpretation</a>
-              <a href="#!" class="collection-item grey-text">Conclusion</a>
-            </div>
+        <div class="col s12 m3">
+          <div class="collection with-header purple-text">
+            <li class="collection-header"><h4 >Final Paper</h4></li>
+            <a href="#research-question" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'research-question'}">Research Question</a>
+            <a href="#abstract" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'abstract'}">Abstract</a>
+            <a href="#intro-background" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'intro-background'}">Introduction and Background</a>
+            <a href="#literature-review" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'literature-review'}">Literature Review</a>
+            <a href="#data-collection" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'data-collection'}">Data Collection Methods</a>
+            <a href="#data-results" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'data-results'}">Data Results Summary</a>
+            <a href="#data-interpretation" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'data-interpretation'}">Data Interpretation</a>
+            <a href="#conclusion" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'conclusion'}">Conclusion</a>
           </div>
-          <div class="card">
-            <div class="collection with-header purple-text">
-              <h5 class="collection-header">Other</h5>
-              <a href="#!" class="collection-item grey-text">Poster Session</a>
-              <a href="#!" class="collection-item grey-text">Final Presentation</a>
-              <a href="#!" class="collection-item grey-text">Executive Summary</a>
-              <a href="#!" class="collection-item grey-text">Beyond the MP</a>
-            </div>
+          <div class="collection with-header purple-text">
+            <li class="collection-header"><h4 >Other</h4></li>
+            <a href="#poster" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'poster'}">Poster Session</a>
+            <a href="#presentation" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'presentation'}">Final Presentation</a>
+            <a href="#executive-summary" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'executive-summary'}">Executive Summary</a>
+            <a href="#beyond-mp" class="collection-item grey-text" ng-class="{active: $route.current.activetab == 'beyond-mp'}">Beyond the MP</a>
           </div>
         </div>
-        <div class="col s12 m8 l9" id="main">
+        <div class="col s12 m9" id="main">
           
           <div ng-view></div>
             
@@ -80,34 +89,6 @@
   </div>
 
   <footer class="page-footer purple">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
     <div class="footer-copyright purple darken-1">
       <div class="container center-align">
       Made by <a class="purple-text text-lighten-2" href="http://dwthurber.com" target="_blank">Derek Thurber</a>
