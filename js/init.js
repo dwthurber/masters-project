@@ -8,7 +8,8 @@
 
 $(document).ready(function(){
     $('ul.tabs').tabs();
-  });
+    $('.tooltipped').tooltip({delay: 50});
+});
 
 
 // create the module and name it scotchApp
@@ -79,6 +80,34 @@ mpApp.config(function($routeProvider) {
             templateUrl : 'guides/conclusion.html',
             controller  : 'mainController',
             activetab: 'conclusion'
+        })
+  
+        // route for the poster page
+        .when('/poster', {
+            templateUrl : 'guides/poster.html',
+            controller  : 'mainController',
+            activetab: 'poster'
+        })
+  
+        // route for the presentation page
+        .when('/presentation', {
+            templateUrl : 'guides/presentation.html',
+            controller  : 'mainController',
+            activetab: 'presentation'
+        })
+  
+        // route for the executive summary page
+        .when('/executive-summary', {
+            templateUrl : 'guides/executive-summary.html',
+            controller  : 'mainController',
+            activetab: 'executive-summary'
+        })
+  
+        // route for the beyond the mp page
+        .when('/beyond-mp', {
+            templateUrl : 'guides/beyond-mp.html',
+            controller  : 'mainController',
+            activetab: 'beyond-mp'
         });
 });
 
