@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mpApp">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Master's Project | Northwestern MS Higher Educaton Administration and Policy</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body ng-controller="firebaseController">
+  
+  <nav class="purple" role="navigation">
+    <div class="nav-wrapper"><a id="logo-container" href="index.html" class="brand-logo left"><img src="img/MSHE-horizontal-option1_whiteTransparent-01.png"></a>
+      <ul class="right">
+          <li><a href="index.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Guides"><i class="material-icons">library_books</i></a></li>
+          <li><a href="resources.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Resources"><i class="material-icons">view_module</i></a></li>
+          <li class="active"><a href="archive.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Archive"><i class="material-icons">view_list</i></a></li>
+      </ul>
+    </div>
+    
+  </nav>
+  <nav class="purple darken-1">
+    <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div class="section white" id="index-banner">
+    <div class="container">
+      <h3 class="header purple-text"><i class="material-icons small">view_list</i> Master's Project Archive</h3>    
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+      <h4>Featured Examples</h4>
+      <ul class="collapsible popout" data-collapsible="accordion" >
+        <li ng-repeat="project in projects | orderBy:['-year','last_name']" ng-if="project.file_path || project.poster_file_path || project.executive_summary_file_path || project.presentation_file_path">
+          <div class="collapsible-header">
+          {{ project.first_name }} {{ project.last_name }}<span class="badge">{{ project.year }}</span></div>
+          <div class="collapsible-body">
+            <h5>{{ project.title }}</h5>
+            <p>{{ project.question }}</p>
+            <a ng-class="{'disabled':project.file_path == ''}" class="btn-floating btn-small waves-effect waves-light purple tooltipped" data-position="bottom" data-delay="50" data-tooltip="Example Full Project"><i class="material-icons">library_books</i></a>
+            <a ng-class="{'disabled':project.poster_file_path == ''}" class="btn-floating btn-small waves-effect waves-light purple tooltipped" data-position="bottom" data-delay="50" data-tooltip="Example Poster"><i class="material-icons">photo_library</i></a>
+            <a ng-class="{'disabled':project.executive_summary_file_path == ''}" class="btn-floating btn-small waves-effect waves-light purple tooltipped" data-position="bottom" data-delay="50" data-tooltip="Example Executive Summary"><i class="material-icons">description</i></a>
+            <a ng-class="{'disabled':project.presentation_file_path == ''}" class="btn-floating btn-small waves-effect waves-light purple tooltipped" data-position="bottom" data-delay="50" data-tooltip="Example Final Presentation"><i class="material-icons">speaker_notes</i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="divider space"></div>
+    <div class="section">
+      <h4>Full List</h4>
+      <br>
+      <form>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">find_in_page</i>
+          <input id="icon_prefix" type="text" class="validate" ng-model="search">
+          <label for="icon_prefix">Search Projects</label>
+        </div>
+      </form>
+      <table class="highlight bordered">
+        <thead>
+          <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Year</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="project in projects | orderBy:['-year','last_name'] | filter:search">
+            <td>{{ project.title }}</td>
+            <td>{{ project.first_name }} {{ project.last_name }}</td>
+            <td>{{ project.year }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer class="page-footer purple">
+    <div class="footer-copyright purple darken-1">
+      <div class="container center-align">
+      Made by <a class="purple-text text-lighten-2" href="http://dwthurber.com" target="_blank">Derek Thurber</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  
+  <!-- load angular and angular route via CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>  
+  
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  
+
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+  
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBlo7kn54LV9DP8bU2fUmxXHIVhWy0ezPk",
+      authDomain: "mp-archive.firebaseapp.com",
+      databaseURL: "https://mp-archive.firebaseio.com",
+      projectId: "mp-archive",
+      storageBucket: "mp-archive.appspot.com",
+      messagingSenderId: "95879227704"
+    };
+    firebase.initializeApp(config);
+  </script>
+  
+  <script src="js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  
+  
+  </body>
+</html>

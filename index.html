@@ -17,7 +17,7 @@
       <ul class="right">
           <li class="active"><a href="index.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Guides"><i class="material-icons">library_books</i></a></li>
           <li><a href="resources.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Resources"><i class="material-icons">view_module</i></a></li>
-          <li><a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Handouts & Extras"><i class="material-icons">speaker_notes</i></a></li>
+          <li><a href="archive.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Archive"><i class="material-icons">view_list</i></a></li>
       </ul>
     </div>
     
@@ -91,12 +91,30 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBlo7kn54LV9DP8bU2fUmxXHIVhWy0ezPk",
+      authDomain: "mp-archive.firebaseapp.com",
+      databaseURL: "https://mp-archive.firebaseio.com",
+      projectId: "mp-archive",
+      storageBucket: "mp-archive.appspot.com",
+      messagingSenderId: "95879227704"
+    };
+    firebase.initializeApp(config);
+  </script>
+  
   <!-- load angular and angular route via CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-  <script src="script.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>  
   
-  <script src="js/materialize.js"></script>
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+  
+  <script src="js/materialize.min.js"></script>
   <script src="js/init.js"></script>
   
   </body>

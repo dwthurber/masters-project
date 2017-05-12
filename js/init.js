@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 
 // create the module and name it scotchApp
-var mpApp = angular.module('mpApp', ['ngRoute']);
+var mpApp = angular.module('mpApp', ['ngRoute', 'firebase']);
 
 // configure our routes
 mpApp.config(function($routeProvider) {
@@ -109,15 +109,28 @@ mpApp.config(function($routeProvider) {
             controller  : 'mainController',
             activetab: 'beyond-mp'
         });
+  
+//        .otherwise, ({redirectTo:'/research-question'});
 });
 
 // create the controller and inject Angular's $scope
-mpApp.controller('mainController', function($scope, $route) {
+mpApp.controller('mainController', ['$scope', '$route', function($scope, $route ) {
 
     $scope.$route = $route;
   
-  $scope.tab = 'tab1';
-  $scope.setTab = function(val) {
-    $scope.tab = val;
-  }
-});
+    $scope.tab = 'tab1';
+    $scope.setTab = function(val) {
+      $scope.tab = val;
+    }
+    
+  
+}]);
+
+mpApp.controller('firebaseController', ['$scope', '$route', '$firebaseArray', function($scope, $route, $firebaseArray ) {
+    var ref = firebase.database().ref();
+    // download the data into a local object
+    $scope.projects = $firebaseArray(ref);
+    // putting a console.log here won't work, see below
+  
+    $scope.search = '';
+}]);
